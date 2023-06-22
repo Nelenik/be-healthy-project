@@ -1,0 +1,164 @@
+.processing {
+  padding: 70px 0 50px;
+  @include modalOverlay;
+  background-color: white;
+
+  &__container {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: 65vw;
+      width: 60px;
+      aspect-ratio: 1/1;
+      background-image: url("@img/logo-olive-2.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include sol1200 {
+        right: 80vw;
+      }
+
+      @include sol640 {
+        left: 20px;
+        right: unset;
+      }
+    }
+  }
+
+  &__block {
+    width: min(100%, 500px);
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  &__chart {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      @include sol640 {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+
+  &__initial-w {
+    left: 0;
+    padding: 10px 12px;
+    position: absolute;
+    top: 5px;
+    width: min-content;
+    background-color: #d8988a;
+    border-radius: 100px;
+    color: #fff;
+    line-height: 100%;
+    font-size: clamp(0.7rem, 0.2vw + 0.7rem, 1rem);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__target-w {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    padding: 10px 13px;
+    width: min-content;
+    background-color: #499eb9;
+    border-radius: 100px;
+    color: #fff;
+    font-size: clamp(0.8rem, 0.2vw + 0.8rem, 1rem);
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    // font-size: clamp(2.1875rem, 0.9vw + 2rem, 3.125rem);
+    font-size: clamp(2rem,.9vw + 1.5rem,3.125rem);
+    font-weight: 700;
+    line-height: 136%;
+    /* 68px/50 */
+    text-align: center;
+
+    @include sol1024 {
+      line-height: 120%;
+    }
+  }
+
+  &__descr {
+    margin-bottom: clamp(30px, 3.646vw, 70px);
+    // font-size: clamp(1.125rem, 0.3vw + 1.1rem, 1.375rem);
+    font-size: clamp(1rem,.3vw + 1rem,1.375rem);
+    font-weight: 400;
+    line-height: 150%;
+    /* 33px/22 */
+    text-align: center;
+  }
+
+}
+
+.plan-progress {
+  &__bar {
+    margin-bottom: clamp(20px, 2.083vw, 40px);
+  }
+
+  &__message {
+    height: 24px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    color: #499eb9;
+    font-size: clamp(0.75rem, 0.3vw + 0.7rem, 1rem);
+    // font-size: 16px;
+    text-align: center;
+  }
+}
+
+.bar {
+  border: 1px solid #499eb9;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #499eb9;
+  height: 65px;
+  max-width: 766px;
+  padding: 4px;
+  position: relative;
+  width: 100%;
+
+  &__fill {
+    background-color: #499eb9;
+    border-radius: 10px;
+    height: 100%;
+    width: 0%;
+
+    &::after {
+      content: attr(data-fill);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      color: #499eb9;
+      font-size: 20px;
+      font-weight: 700;
+      mix-blend-mode: multiply;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+}
+
+.modal-open {
+  @include modalOpen;
+}

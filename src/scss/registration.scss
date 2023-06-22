@@ -1,0 +1,11 @@
+@import "./scss-parts/base";
+@import '../../node_modules/swiper/swiper-bundle.min.css';//swiper.js styles
+@import "./scss-parts/common";
+@import "./scss-parts/main/header";
+@import "./scss-parts/main/registration";
+@import "./scss-parts/main/footer";
+
+// js styles
+.js-hide {
+  display: none;
+}

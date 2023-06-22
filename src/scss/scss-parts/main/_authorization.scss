@@ -1,0 +1,59 @@
+.authorization {
+  padding: 70px 50px;
+  @include modalOverlay;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include sol640 {
+    padding: 30px 15px;
+  }
+
+
+  &--open {
+    @include modalOpen;
+  }
+
+  &__content {
+    position: relative;
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 60px 60px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    @include sol1024 {
+      padding: 30px;
+    }
+    @include sol640 {
+      padding: 30px 15px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    width: clamp(30px, 2.5vw, 75px);
+    aspect-ratio: 1/1;
+    font-size: 3rem;
+    line-height: 0;
+    border-radius: 100%;
+    border: 1px solid transparent;
+    color: #D7BA8C;
+    transition: color 0.3s ease;
+
+    @include sol640 {
+      left: unset;
+      bottom: unset;
+      top: 15px;
+      right: 15px;
+      font-size: 2.5rem;
+    }
+
+    &:hover:not(:active),
+    &:focus-visible {
+      color: #f0e8dc;
+    }
+
+    &:active {
+      color: #9e6d23;
+    }
+  }
+}

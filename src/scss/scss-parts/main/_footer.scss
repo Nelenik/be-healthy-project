@@ -1,0 +1,152 @@
+.footer {
+  padding: 20px 0;
+
+  @include sol769 {
+    padding-top: 40px;
+    border-top: 1px solid #eaeaea;
+  }
+
+  &__text {
+    font-family: Helvetica, 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 113%;
+    color: rgb(89, 89, 89);
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-auto-rows: auto;
+
+    @include sol769 {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+      column-gap: 20px;
+    }
+
+    @include sol479 {
+      grid-template-columns: 0.5fr 3fr 0.5fr;
+    }
+  }
+
+  &__contacts {
+    @include sol769 {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+
+    @include sol479 {
+      grid-row: 3/4;
+      grid-column: 2/3;
+      justify-self: start;
+      position: relative;
+        left: 52%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__pay {
+    justify-self: center;
+
+    @include sol769 {
+      grid-column: span 2;
+    }
+
+    @include sol479 {
+      grid-column: 2/ span 1;
+
+    }
+  }
+
+  &__nav {
+    justify-self: end;
+
+    @include sol479 {
+      grid-column: 2/3;
+      justify-self: start;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+}
+
+.contacts {
+
+  &__text {
+    @include resetMg;
+    line-height: 170%;
+
+  }
+
+  &__link {
+    outline: none;
+  }
+
+}
+
+.pay {
+  &__title {
+    @include resetMg;
+    margin-bottom: 3px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__secure-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    justify-content: space-between;
+  }
+
+  &__secure-item {}
+
+  &__secure-img {
+    display: block;
+    height: 12px;
+  }
+
+  &__system-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__system-item {}
+
+  &__system-img {
+    display: block;
+    height: 9px;
+  }
+}
+
+.footer-nav {
+
+  &__list {}
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {}
+}
+
+.link-effects {
+  outline: none;
+  transition: color 0.4s ease;
+
+  &:hover:not(:focus-visible):not(:active),
+  &:focus-visible {
+    color: #b044f9;
+  }
+
+  &:active {
+    color: #591d82;
+  }
+}

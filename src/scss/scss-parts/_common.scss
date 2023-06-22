@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+// container первая переменная max-width, вторая - padding
+// .container {
+//   @include container(1900px, 100px);
+// }
+.container {
+  margin: auto;
+  padding: 0 10.2vw;
+  width: 100%;
+
+  @include sol1024 {
+    margin: 0 auto;
+    padding: 0 3.375em;
+  }
+
+  @include sol769 {
+    padding: 0 2.7em;
+  }
+  @include sol640 {
+    padding: 0 1.125em;
+  }
+}
+
+

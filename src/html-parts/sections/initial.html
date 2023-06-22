@@ -1,0 +1,382 @@
+<section class="quiz-section">
+  <div class="container quiz-section__container">
+    <button class="btn-reset go-back-btn js-back-btn js-hide" type="button">
+      <svg>
+        <use xlink:href="sprite.svg#arrow"></use>
+      </svg>
+      Назад
+    </button>
+    <h2 class="visually-hidden">Анкета пользователя</h2>
+    <div class="quiz-section__descr-block js-descr">
+      <p class="quiz-section__descr">
+        Индивидуальный подход к каждому человеку - залог <span>быстрого</span> и <span>приятного</span> похудения.
+      </p>
+      <p class="quiz-section__descr">Ешьте хорошо,
+        выглядите <span>потрясающе!</span></p>
+      <p class="quiz-section__descr quiz-section__descr--sm">Чтобы получить свой персональный план питания, ответьте на несколько вопросов в анкете ниже 👇</p>
+    </div>
+    <div class="quiz" id="quiz">
+      <div class="gender js-step" data-target="0">
+        <h3 class="step-title gender__left">Ваш пол?</h3>
+        <div class="gender__choice-wrapper">
+          <button type="button" data-property="gender" data-value="женщина"
+            class="btn-reset gender__choice gender__choice--w js-next">
+            <picture>
+              <img class="gender__choice-img gender__choice-img--w" src="@img/form-pics/woman-2.svg"
+                alt="Изображение подтянутой женщины" loading="lazy">
+            </picture>
+            <span class="gender__choice-text gender__choice-text--w"><span>женщина</span></span>
+          </button>
+          <button type="button" data-property="gender" data-value="мужчина"
+            class="btn-reset gender__choice gender__choice--m js-next">
+            <picture>
+              <img class="gender__choice-img" src="@img/form-pics/man.svg" alt="Изображение спортивного мужчины"
+                loading="lazy">
+            </picture>
+            <span class="gender__choice-text gender__choice-text--m"><span>мужчина</span></span>
+          </button>
+        </div>
+
+      </div>
+      <div class="quiz__block step js-hide js-step" data-target="1">
+        <div class="step__left">
+          <h3 class="step__title step-title step__title--protein">Белок</h3>
+          <p class="step__question protein">Вы предпочитаете мясо или овощи?</p>
+        </div>
+        <div class="step__right">
+          <button class="step__choice-bg btn-reset js-next" type="button" data-property="protein" data-value="true">
+            <span class="step__value step__value--meat">Я ем мясо</span>
+          </button>
+          <button class="step__choice-bg btn-reset js-next" type="button" data-property="protein" data-value="false">
+            <span class="step__value step__value--vegan">Я вегетарианец</span>
+          </button>
+        </div>
+        <div class="step__help help">
+          <button class="btn-reset help__btn-open js-open-help" type="button">
+            <svg>
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            Помощь
+          </button>
+          <div class="help__info">
+            <button class="btn-reset help__btn-close js-close-help">
+              <svg>
+                <use xlink:href="sprite.svg#close"></use>
+              </svg>
+            </button>
+            <svg class="help__info-icon">
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            <p class="help__text">
+              Мы рекомендуем вам исключить только те продукты, на которые у вас аллергия, которые вы не должны есть по
+              состоянию здоровья или из-за диетических ограничений, или продукты, которые вы категорически не любите.
+              Чем больше продуктов вы включите, тем разнообразнее и эффективнее будет ваша диета.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__block step js-hide js-step" data-target="2">
+        <div class="step__left">
+          <h3 class="step__title step-title step__title--fish">Fish</h3>
+          <p class="step__question fish">Как вы относитесь к рыбе и морепродуктам?</p>
+        </div>
+        <div class="step__right">
+          <button class="step__choice-bg btn-reset js-next" type="button" data-property="fish" data-value="true">
+            <span class="step__value step__value--fish-yes">Это моя страсть</span>
+          </button>
+          <button class="step__choice-bg btn-reset js-next" type="button" data-property="fish" data-value="false">
+            <span class="step__value step__value--fish-no">Стараюсь избегать</span>
+          </button>
+        </div>
+        <div class="step__help help">
+          <button class="btn-reset help__btn-open js-open-help" type="button">
+            <svg>
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            Помощь
+          </button>
+          <div class="help__info">
+            <button class="btn-reset help__btn-close js-close-help">
+              <svg>
+                <use xlink:href="sprite.svg#close"></use>
+              </svg>
+            </button>
+            <svg class="help__info-icon">
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            <p class="help__text">
+              Мы рекомендуем вам исключить только те продукты, на которые у вас аллергия, которые вы не должны есть по
+              состоянию здоровья или из-за диетических ограничений, или продукты, которые вы категорически не любите.
+              Чем больше продуктов вы включите, тем разнообразнее и эффективнее будет ваша диета.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__block step js-hide js-step" data-target="3">
+        <div class="step__left">
+          <h3 class="step__title step-title step__title--milk">Молочные продукты</h3>
+          <p class="step__question milk">Входят ли в ваш рацион молоко и молочные продукты?</p>
+        </div>
+        <div class="step__right">
+          <button class="step__choice-bg btn-reset js-next" type="button" data-property="milk" data-value="true">
+            <span class="step__value step__value--milk-yes">Да, постоянно</span>
+          </button>
+          <button class="step__choice-bg btn-reset js-next" type="button" data-property="milk" data-value="false">
+            <span class="step__value step__value--milk-no">Нет, не люблю</span>
+          </button>
+        </div>
+        <div class="step__help help">
+          <button class="btn-reset help__btn-open js-open-help" type="button">
+            <svg>
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            Помощь
+          </button>
+          <div class="help__info">
+            <button class="btn-reset help__btn-close js-close-help">
+              <svg>
+                <use xlink:href="sprite.svg#close"></use>
+              </svg>
+            </button>
+            <svg class="help__info-icon">
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            <p class="help__text">
+              Мы рекомендуем вам исключить только те продукты, на которые у вас аллергия, которые вы не должны есть по
+              состоянию здоровья или из-за диетических ограничений, или продукты, которые вы категорически не любите.
+              Чем больше продуктов вы включите, тем разнообразнее и эффективнее будет ваша диета.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__block step js-hide js-step" data-target="4">
+        <div class="step__left">
+          <h3 class="step__title step-title step__title--activity">Физическая активность</h3>
+          <p class="step__question activity"><span class="desk">Оцените свой уровень физической активности?</span><span class="mob">Выберите одно</span></p>
+        </div>
+        <div class="step__right step__right--multi">
+          <button class="step__choice btn-reset js-next" type="button" data-property="activity" data-value="none">
+            Веду малоподвижный образ жизни
+          </button>
+          <button class="step__choice btn-reset js-next" type="button" data-property="activity" data-value="low">
+            Часто хожу пешком
+          </button>
+          <button class="step__choice btn-reset js-next" type="button" data-property="activity" data-value="1-2">
+            Спорт менее 3 раз в неделю
+          </button>
+          <button class="step__choice btn-reset js-next" type="button" data-property="activity" data-value="3-5">
+            Спорт 3 - 5 раз в неделю
+          </button>
+          <button class="step__choice btn-reset js-next" type="button" data-property="activity" data-value="5-7">
+            Спорт - моя жизнь
+          </button>
+        </div>
+        <div class="step__help help">
+          <button class="btn-reset help__btn-open js-open-help" type="button">
+            <svg>
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            Помощь
+          </button>
+          <div class="help__info">
+            <button class="btn-reset help__btn-close js-close-help">
+              <svg>
+                <use xlink:href="sprite.svg#close"></use>
+              </svg>
+            </button>
+            <svg class="help__info-icon">
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            <p class="help__text">
+              Ваш уровень физической активности является единственным наиболее важным фактором, определяющим количество
+              пищи в вашей программе питания. Пожалуйста, выберите ответ, наиболее соответствующий вашему образу жизни
+              для достижения целевого веса.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__block step js-hide js-step" data-target="5">
+        <div class="step__left">
+          <h3 class="step__title step-title step__title--day-mode">Ваша деятельность</h3>
+          <p class="step__question day-mode"><span class="desk">С чем связана ваша деятельность?</span><span
+              class="mob">Выберите одно</span></p>
+        </div>
+        <div class="step__right step__right--multi">
+          <button class="step__choice btn-reset js-next" type="button" data-property="dayMode" data-value="1">
+            Сидячая работа
+          </button>
+          <button class="step__choice btn-reset js-next" type="button" data-property="dayMode" data-value="2">
+            Частая смена деятельности(сидячая работа чередуется с физическим трудом) 
+          </button>
+          <button class="step__choice btn-reset js-next" type="button" data-property="dayMode" data-value="3">
+            Большую часть дня я хожу пешком.
+          </button>
+          <button class="step__choice btn-reset js-next" type="button" data-property="dayMode" data-value="4">
+            Тяжелый физический труд
+          </button>
+          <button class="step__choice btn-reset js-next" type="button" data-property="dayMode" data-value="5">
+            Почти все время провожу дома (не работаю/работаю удаленно)
+          </button>
+        </div>
+        <div class="step__help help">
+          <button class="btn-reset help__btn-open js-open-help" type="button">
+            <svg>
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            Помощь
+          </button>
+          <div class="help__info">
+            <button class="btn-reset help__btn-close js-close-help">
+              <svg>
+                <use xlink:href="sprite.svg#close"></use>
+              </svg>
+            </button>
+            <svg class="help__info-icon">
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            <p class="help__text">
+              Ваш образ жизни оказывает значительное влияние на количество продуктов, включенных в вашу индивидуальную
+              программу питания. Если вы не можете найти точный ответ, выберите тот, который наиболее соответствует
+              вашей повседневной жизни.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__block step js-hide js-step" data-target="6">
+        <div class="step__left">
+          <h3 class="step__title step-title step__title--data">Данные</h3>
+        </div>
+        <div class="step__right step__right--measures">
+          <form name="bodyData" class="measures" autocomplete="off">
+            <label class="measures__input-wrap age">
+              <input class="measures__input" type="text" name="age" placeholder="Возраст">
+            </label>
+            <label class="measures__input-wrap height">
+              <input class="measures__input" type="text" name="height" placeholder="Рост (см)">
+            </label>
+            <label class="measures__input-wrap weight">
+              <input class="measures__input" type="text" name="weight" placeholder="Вес (кг)">
+            </label>
+            <label class="measures__input-wrap targetWeight">
+              <input class="measures__input" type="text" name="targetWeight" placeholder="Целевой вес (кг)">
+            </label>
+            <button class="btn-reset measures__sbmt-btn" disabled data-path="processing-modal">Далее</button>
+          </form>
+          <div class="swiper measures-swiper">
+            <ul class="list-reset swiper-wrapper">
+              <li class="swiper-slide">
+                <picture>
+                  <source srcset="@img/slider/1.webp" type="image/webp">
+                  <img class="swiper__img" src="@img/slider/1.jpg" alt="Разнообразные блюда здорового питания"
+                    loading="lazy">
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source srcset="@img/slider/2.webp" type="image/webp">
+                  <img class="swiper__img" src="@img/slider/2.jpg" alt="Разнообразные блюда здорового питания"
+                    loading="lazy">
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source srcset="@img/slider/3.webp" type="image/webp">
+                  <img class="swiper__img" src="@img/slider/3.jpg" alt="Разнообразные блюда здорового питания"
+                    loading="lazy">
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source srcset="@img/slider/4.webp" type="image/webp">
+                  <img class="swiper__img" src="@img/slider/4.jpg" alt="Разнообразные блюда здорового питания"
+                    loading="lazy">
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source srcset="@img/slider/5.webp" type="image/webp">
+                  <img class="swiper__img" src="@img/slider/5.jpg" alt="Разнообразные блюда здорового питания"
+                    loading="lazy">
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source srcset="@img/slider/6.webp" type="image/webp">
+                  <img class="swiper__img" src="@img/slider/6.jpg" alt="Разнообразные блюда здорового питания"
+                    loading="lazy">
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source srcset="@img/slider/7.webp" type="image/webp">
+                  <img class="swiper__img" src="@img/slider/7.jpg" alt="Разнообразные блюда здорового питания"
+                    loading="lazy">
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source srcset="@img/slider/8.webp" type="image/webp">
+                  <img class="swiper__img" src="@img/slider/8.jpg" alt="Разнообразные блюда здорового питания"
+                    loading="lazy">
+                </picture>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step__help help">
+          <button class="btn-reset help__btn-open js-open-help" type="button">
+            <svg>
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            Помощь
+          </button>
+          <div class="help__info">
+            <button class="btn-reset help__btn-close js-close-help">
+              <svg>
+                <use xlink:href="sprite.svg#close"></use>
+              </svg>
+            </button>
+            <svg class="help__info-icon">
+              <use xlink:href="sprite.svg#question-mark"></use>
+            </svg>
+            <p class="help__text">
+              Эта программа питания является индивидуальной и учитывает размеры вашего тела.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quiz-section__tabs tabs js-hide">
+    <div class="swiper tabs__swiper ">
+      <div class=" swiper-wrapper">
+        <button class="btn-reset swiper-slide tabs__btn" disabled type="button" data-path="0">
+          Пол
+        </button>
+        <button class="btn-reset swiper-slide tabs__btn" disabled type="button" data-path="1">
+          Белки
+        </button>
+        <button class="btn-reset swiper-slide tabs__btn" disabled type="button" data-path="2">
+          Рыба
+        </button>
+        <button class="btn-reset swiper-slide tabs__btn" disabled type="button" data-path="3">
+          Молочный/растительный белок
+        </button>
+        <button class="btn-reset swiper-slide tabs__btn" disabled type="button" data-path="4">
+          Физическая активность
+        </button>
+        <button class="btn-reset swiper-slide tabs__btn" disabled type="button" data-path="5">
+          Образ жизни
+        </button>
+        <button class="btn-reset swiper-slide tabs__btn" disabled type="button" data-path="6">
+          Данные
+        </button>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" data-percent="0%"></div>
+    </div>
+  </div>
+
+</section>

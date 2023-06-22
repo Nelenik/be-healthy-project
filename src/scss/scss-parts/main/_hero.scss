@@ -1,0 +1,94 @@
+.hero {
+
+  &__container {}
+
+  &__swiper-wrap {
+    width: min(100%,max(1200px,70vw));
+    margin: 0 auto;
+    padding: clamp(40px, 3vw, 150px);
+    min-height: clamp(300px, 40vw, 1500px);
+    position: relative;
+  }
+
+  &__swiper {
+    position: absolute;
+    inset: 0;
+    border-radius: 0 0 10px 10px;
+
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+        border-radius: 0 0 10px 10px;
+      }
+
+    }
+  }
+
+  &__swiper-picture {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__swiper-img {
+    height: 100%;
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    @include resetMg;
+    margin-bottom: 40px;
+    width: min(70%, 1000px);
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 2.2vw + 0.8rem, 5rem);  
+    line-height: 200%;
+    pointer-events: none;
+    color: #FFFFFF;
+
+    @include sol640 {
+      margin-bottom: 25px;
+      line-height: 150%
+    }
+
+    span {
+      font-size: clamp(1.4rem, 2.7vw + 1rem, 6rem);
+    }
+  }
+
+  &__link {
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.25rem;
+    line-height: 200%;
+    font-weight: 600;
+    background-color: #c29469;
+    outline: none;
+    border-radius: 20px;
+    transition:  background-color 0.3s ease;
+
+    &:hover:not(:active), &:focus-visible {
+      background-color: #d9b99b;
+    }
+    &:active {
+      background-color: #c66b15;
+
+    }
+
+    @include sol640 {
+      padding: 5px 10px;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicons/favicon-16.png">
+  <link rel="icon" href="img/favicons/favicon-32.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/registration.css">
+  <!-- @@pluginScript -->
+  <script src="js/registration.js" defer></script>
+  <title>Be Healthy - регистрация</title>
+</head>
+
+<body>
+  <div class="page reg-page">
+    <header class="header">
+      <div class="container header__container">
+        <a href="index.html" class="header__logo">
+          <img src="@img/logo-olive-2.svg" alt="Be Healthy logo" class="header__logo-img">
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">BeHealthy - быстрая регистрация, введите email в форму</h1>
+      <!-- import of html parts -->
+      @@include('html-parts/sections/_registration.html', {})
+    </main>
+    @@include('html-parts/footer.html', {})
+  </div>
+</body>
+
+</html>

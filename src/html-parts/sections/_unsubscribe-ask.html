@@ -1,0 +1,37 @@
+<div class="unsubscribe" data-modal="unsubscribe">
+  <div class="unsubscribe__content">
+    <button class="btn-reset unsubscribe__close" type="button">×</button>
+    <p class="unsubscribe__greeting">
+      <strong>Здравствуйте!</strong><br>Нам очень жаль, что вы собираетесь отписаться от наших услуг. Мы постоянно работаем над качеством и эффективностью нашей программы. Вы очень поможете нам стать лучше, если укажете причину отписки. Также, если вы желаете, оставьте небольшой отзыв в форме ниже.
+    </p>
+    <form class="unsubscribe__form" name="unsubscribeQuiz">
+        <label class="unsubscribe__choice un-choice">
+          <input class="un-choice__default" type="radio" name="unChoice" value="achieved_goal">
+          <span class="un-choice__text">Я достиг своей цели в похудении и больше не нуждаюсь в вашей услуге.</span>
+        </label>
+        <label class="unsubscribe__choice un-choice">
+          <input class="un-choice__default" type="radio" name="unChoice" value="no_expected_results">
+          <span class="un-choice__text">Я не получил ожидаемых результатов от вашей услуги.</span>
+        </label>
+        <label class="unsubscribe__choice un-choice">
+          <input class="un-choice__default" type="radio" name="unChoice" value="found_alternatives">
+          <span class="un-choice__text">Я нашел более дешевую или более удобную альтернативу.</span>
+        </label>
+        <label class="unsubscribe__choice un-choice">
+          <input class="un-choice__default" type="radio" name="unChoice" value="need_break">
+          <span class="un-choice__text">Хочу сделать перерыв</span>
+        </label>
+        <label class="unsubscribe__choice un-choice">
+          <input class="un-choice__default" type="radio" name="unChoice" value="dissatisfied_service">
+          <span class="un-choice__text">Я не удовлетворен качеством обслуживания или поддержки клиентов.</span>
+        </label>
+        <label class="unsubscribe__choice un-choice">
+          <input class="un-choice__default" type="radio" name="unChoice" value="accidentally_subscribed">
+          <span class="un-choice__text">Я подписался на услугу по ошибке или неправильно понял условия</span>
+        </label>
+      <textarea class="unsubscribe__message" name="unMessage" id="unMessage" cols="30" rows="3" placeholder="Комментарий (по желанию)"></textarea>
+    </form>
+    <button type="button" class="btn-reset unsubscribe__confirm-btn js-un-btn" data-un="1">Продолжить</button>
+    <button class="btn-reset unsubscribe__canсel-btn js-un-btn" type="button" data-un="0">Отмена</button>
+  </div>
+</div>

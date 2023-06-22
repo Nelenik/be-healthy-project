@@ -1,0 +1,15 @@
+@import "./scss-parts/base";
+@import '../../node_modules/swiper/swiper-bundle.min.css';//swiper.js styles
+@import "./scss-parts/common";
+@import "./scss-parts/main/header";
+@import "./scss-parts/main/hero";
+@import "./scss-parts/main/initial";
+@import "./scss-parts/main/processing";
+@import "./scss-parts/main/footer";
+@import "./scss-parts/main/unsubscribe-ask";
+@import "./scss-parts/main/authorization";
+
+// js styles
+.js-hide {
+  display: none;
+}
