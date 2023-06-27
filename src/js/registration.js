@@ -1,5 +1,6 @@
 import { initDishesSwiper } from "./components/parts/_registr.js";
 import { Timer } from "./components/vendor/timer.js";
+import { initUnsubModal } from "./components/parts/_unsubscribe.js";
 
 // инициализируем тайемр на странице регистрации по истечении времени будет редирект на главную
 let offerTimer;
@@ -33,3 +34,5 @@ window.addEventListener('unload', () => {
 })
 // запуск свайпера на странице регистрации
 initDishesSwiper()
+
+initUnsubModal()
