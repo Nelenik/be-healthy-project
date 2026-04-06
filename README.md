@@ -5,6 +5,8 @@
 Commercial landing page for **behealthyplan.ru** — a personalized nutrition plan service.  
 Conversion funnel: **Hero → 7-step quiz → Processing screen → Offer + payment**.
 
+> **Note:** the auth and payment blocks are third-party widget placeholders (CloudPayments). The quiz engine, modal system, cancellation flow, and the full build pipeline are implemented from scratch.
+
 ---
 
 ## Stack
